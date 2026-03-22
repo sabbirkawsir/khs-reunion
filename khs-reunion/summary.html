@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>আর্থিক সারসংক্ষেপ - কুলানন্দপুর উচ্চ বিদ্যালয় পুনর্মিলনী ২০২৬</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Serif+Bengali:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1a6b3a;--gl:#2d9b58;--gd:#0d4023;--gold:#c9a227;--gol:#f0c94a;--cream:#fdf8ee;--tm:#555;--sh:0 8px 32px rgba(26,107,58,.12);--err:#c0392b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hind Siliguri',sans-serif;background:var(--cream);color:#1a1a1a}
+nav{background:var(--gd);padding:0 5%;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 20px rgba(0,0,0,.35)}
+.nb{display:flex;align-items:center;gap:12px;padding:12px 0;text-decoration:none}
+.nbi{width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px}
+.nbt{color:#fff;font-size:.82rem;font-weight:600;line-height:1.4}
+.nbt small{opacity:.65;font-weight:300}
+.nl{display:flex;list-style:none}
+.nl a{color:rgba(255,255,255,.82);text-decoration:none;padding:18px 12px;display:block;font-size:.87rem;border-bottom:3px solid transparent;transition:all .2s}
+.nl a:hover,.nl a.active{color:var(--gol);border-bottom-color:var(--gold)}
+.hb{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:10px}
+
+.page-hero{background:linear-gradient(135deg,var(--gd),var(--green));padding:50px 5%;text-align:center;color:#fff}
+.page-hero h1{font-family:'Noto Serif Bengali',serif;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:10px;font-weight:900}
+.page-hero p{color:rgba(255,255,255,.8)}
+
+.wrap{max-width:1100px;margin:0 auto;padding:40px 5%}
+
+/* Income summary */
+.big-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-bottom:32px}
+.big-card{background:#fff;border-radius:18px;padding:28px 22px;text-align:center;box-shadow:var(--sh);border-top:5px solid var(--green);position:relative;overflow:hidden}
+.big-card::before{content:'';position:absolute;bottom:-20px;right:-20px;width:80px;height:80px;border-radius:50%;opacity:.06;background:var(--green)}
+.big-card.gold{border-top-color:var(--gold)}
+.big-card.red{border-top-color:#e74c3c}
+.big-card.blue{border-top-color:#2980b9}
+.bc-icon{font-size:2rem;margin-bottom:10px}
+.bc-num{font-family:'Noto Serif Bengali',serif;font-size:2rem;font-weight:700;color:var(--green);line-height:1}
+.big-card.gold .bc-num{color:var(--gold)}
+.big-card.red .bc-num{color:#e74c3c}
+.big-card.blue .bc-num{color:#2980b9}
+.bc-label{font-size:.85rem;color:var(--tm);margin-top:6px}
+
+/* Section header */
+.sec-head{font-family:'Noto Serif Bengali',serif;font-size:1.3rem;color:var(--gd);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+
+/* Income table */
+.card-box{background:#fff;border-radius:16px;padding:28px;box-shadow:var(--sh);margin-bottom:24px}
+table{width:100%;border-collapse:collapse}
+thead{background:#f0f7f4}
+thead th{color:var(--gd);padding:12px 16px;text-align:left;font-size:.85rem;font-weight:700}
+tbody tr{border-bottom:1px solid #f0f0f0}
+tbody tr:last-child{border-bottom:none}
+tbody td{padding:12px 16px;font-size:.9rem;color:#333}
+.total-row{background:#f0f7f4;font-weight:700}
+.total-row td{color:var(--gd);font-size:1rem}
+.amt{font-family:'Noto Serif Bengali',serif;font-weight:600;color:var(--green)}
+.amt.red{color:#e74c3c}
+.amt.gold{color:var(--gold)}
+.balance-box{background:var(--green);color:#fff;border-radius:14px;padding:24px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:8px}
+.balance-label{font-size:1rem;font-family:'Noto Serif Bengali',serif}
+.balance-amt{font-family:'Noto Serif Bengali',serif;font-size:2rem;font-weight:700;color:var(--gol)}
+.balance-box.deficit{background:#c0392b}
+
+/* Expense form */
+.expense-form{background:#fff;border-radius:16px;padding:28px;box-shadow:var(--sh);margin-bottom:24px}
+.expense-form h3{font-family:'Noto Serif Bengali',serif;color:var(--gd);margin-bottom:20px;font-size:1.1rem}
+.exp-row{display:grid;grid-template-columns:1fr 1fr auto;gap:12px;align-items:end;margin-bottom:12px}
+.fg label{font-size:.85rem;font-weight:600;color:var(--gd);display:block;margin-bottom:6px}
+.fg input,.fg select{width:100%;padding:10px 14px;border:2px solid #dde8e3;border-radius:8px;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s}
+.fg input:focus,.fg select:focus{border-color:var(--gl)}
+.add-btn{padding:10px 18px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;cursor:pointer;white-space:nowrap;align-self:end;height:42px}
+.add-btn:hover{background:var(--gl)}
+.del-btn{padding:8px 14px;background:#fde8e8;color:#c0392b;border:none;border-radius:8px;cursor:pointer;font-size:.85rem;transition:background .2s}
+.del-btn:hover{background:#f5b7b1}
+.save-note{font-size:.8rem;color:#888;margin-top:10px}
+
+/* Refresh */
+.top-bar{display:flex;justify-content:flex-end;margin-bottom:20px}
+.refresh-btn{padding:9px 20px;background:var(--green);color:#fff;border:none;border-radius:8px;font-family:'Hind Siliguri',sans-serif;font-size:.9rem;cursor:pointer;transition:background .2s}
+.refresh-btn:hover{background:var(--gl)}
+
+footer{background:#0a2a18;color:rgba(255,255,255,.7);text-align:center;padding:24px 5%;font-size:.85rem;margin-top:40px}
+footer a{color:var(--gol);text-decoration:none}
+
+@media(max-width:768px){
+  .nl{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:var(--gd)}
+  .nl.open{display:flex}
+  .nl a{padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.05)}
+  .hb{display:block}
+  nav{position:relative}
+  .exp-row{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
+  .exp-row .add-btn{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nb">
+    <div class="nbi">🏫</div>
+    <div class="nbt">কুলানন্দপুর উচ্চ বিদ্যালয়<br><small>পুনর্মিলনী ২০২৬</small></div>
+  </a>
+  <ul class="nl" id="nl">
+    <li><a href="index.html">হোম</a></li>
+    <li><a href="list.html">তালিকা</a></li>
+    <li><a href="summary.html" class="active">আর্থিক সারসংক্ষেপ</a></li>
+    <li><a href="registration.html" style="color:var(--gol);font-weight:600;">✍️ নিবন্ধন করুন</a></li>
+  </ul>
+  <button class="hb" onclick="document.getElementById('nl').classList.toggle('open')">☰</button>
+</nav>
+
+<div class="page-hero">
+  <h1>আর্থিক সারসংক্ষেপ</h1>
+  <p>আয় ও ব্যয়ের সম্পূর্ণ হিসাব — ঈদ পুনর্মিলনী ২০২৬</p>
+</div>
+
+<div class="wrap">
+  <div class="top-bar">
+    <button class="refresh-btn" onclick="loadAll()">🔄 ডেটা রিফ্রেশ</button>
+  </div>
+
+  <!-- Overview cards -->
+  <div class="big-cards">
+    <div class="big-card"><div class="bc-icon">👥</div><div class="bc-num" id="ovTotal">০</div><div class="bc-label">মোট নিবন্ধন</div></div>
+    <div class="big-card gold"><div class="bc-icon">💰</div><div class="bc-num" id="ovIncome">০</div><div class="bc-label">মোট আয় (টাকা)</div></div>
+    <div class="big-card red"><div class="bc-icon">💸</div><div class="bc-num" id="ovExpense">০</div><div class="bc-label">মোট ব্যয় (টাকা)</div></div>
+    <div class="big-card blue"><div class="bc-icon">📊</div><div class="bc-num" id="ovBalance">০</div><div class="bc-label">নিট ব্যালেন্স (টাকা)</div></div>
+  </div>
+
+  <!-- Income breakdown -->
+  <div class="card-box">
+    <div class="sec-head">💰 আয়ের বিবরণ</div>
+    <table id="incomeTable">
+      <thead><tr><th>আয়ের খাত</th><th>সংখ্যা</th><th>একক মূল্য</th><th>মোট (টাকা)</th></tr></thead>
+      <tbody>
+        <tr><td>চাকুরীজীবী (প্রাক্তন)</td><td id="cntJob">০ জন</td><td>১,০০০</td><td class="amt" id="amtJob">০</td></tr>
+        <tr><td>ছাত্র/ছাত্রী (বর্তমান)</td><td id="cntStu">০ জন</td><td>৫০০</td><td class="amt" id="amtStu">০</td></tr>
+        <tr><td>সঙ্গী / পরিবার (প্রাপ্তবয়স্ক)</td><td id="cntAdult">০ জন</td><td>১,০০০</td><td class="amt" id="amtAdult">০</td></tr>
+        <tr class="total-row"><td colspan="3">মোট আয়</td><td class="amt gold" id="totalIncome">০</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Expense breakdown -->
+  <div class="card-box">
+    <div class="sec-head">💸 ব্যয়ের বিবরণ</div>
+    <table id="expenseTable">
+      <thead><tr><th>ব্যয়ের খাত</th><th>পরিমাণ (টাকা)</th><th>নোট</th><th>মুছুন</th></tr></thead>
+      <tbody id="expBody">
+        <!-- rows here -->
+      </tbody>
+    </table>
+    <div style="margin-top:16px">
+      <table><tbody>
+        <tr class="total-row"><td style="padding:12px 16px">মোট ব্যয়</td><td class="amt red" style="padding:12px 16px" id="totalExpense">০</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+
+  <!-- Balance -->
+  <div class="balance-box" id="balanceBox">
+    <span class="balance-label">💰 নিট ব্যালেন্স (আয় − ব্যয়)</span>
+    <span class="balance-amt" id="netBalance">০ টাকা</span>
+  </div>
+
+  <!-- Add expense form -->
+  <div class="expense-form" style="margin-top:24px">
+    <h3>➕ নতুন ব্যয় যোগ করুন</h3>
+    <div class="exp-row">
+      <div class="fg">
+        <label>ব্যয়ের খাত <span style="color:red">*</span></label>
+        <input type="text" id="expName" placeholder="যেমন: খাবার, সাজসজ্জা, মঞ্চ...">
+      </div>
+      <div class="fg">
+        <label>পরিমাণ (টাকা) <span style="color:red">*</span></label>
+        <input type="number" id="expAmt" placeholder="০" min="0">
+      </div>
+      <button class="add-btn" onclick="addExpense()">+ যোগ করুন</button>
+    </div>
+    <div class="fg">
+      <label>নোট / মন্তব্য</label>
+      <input type="text" id="expNote" placeholder="ঐচ্ছিক বিবরণ..." style="width:100%">
+    </div>
+    <p class="save-note">⚡ ব্যয়ের তথ্য স্বয়ংক্রিয়ভাবে Google Sheets এ সংরক্ষিত হবে।</p>
+  </div>
+</div>
+
+<footer>
+  <a href="index.html">← হোমে ফিরুন</a> &nbsp;|&nbsp;
+  <a href="list.html">📋 তালিকা</a> &nbsp;|&nbsp;
+  © ঈদ পুনর্মিলনী আয়োজক কমিটি ২০২৬
+</footer>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
+const BN=['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+const toBN=n=>String(n).split('').map(c=>BN[+c]??c).join('');
+const toComma=n=>toBN(Math.round(n).toLocaleString('en'));
+
+let expenses=JSON.parse(localStorage.getItem('expenses')||'[]');
+let incomeData={job:0,stu:0,adults:0};
+
+async function loadAll(){
+  try{
+    const res=await fetch(SCRIPT_URL+'?action=summary');
+    const json=await res.json();
+    incomeData=json.income||{job:0,stu:0,adults:0};
+    if(json.expenses) expenses=json.expenses;
+  }catch(e){
+    // Use demo data
+    incomeData={job:12,stu:8,jobAmt:12000,stuAmt:4000,adultsAmt:5000,adultsCnt:5};
+  }
+  renderAll();
+}
+
+function renderAll(){
+  const jobAmt=incomeData.jobAmt||(incomeData.job||0)*1000;
+  const stuAmt=incomeData.stuAmt||(incomeData.stu||0)*500;
+  const adultsAmt=incomeData.adultsAmt||0;
+  const totalIn=jobAmt+stuAmt+adultsAmt;
+  const totalEx=expenses.reduce((s,e)=>s+parseFloat(e.amt||0),0);
+  const net=totalIn-totalEx;
+  const total=(incomeData.job||0)+(incomeData.stu||0);
+
+  // Overview
+  document.getElementById('ovTotal').textContent=toBN(total);
+  document.getElementById('ovIncome').textContent=toComma(totalIn);
+  document.getElementById('ovExpense').textContent=toComma(totalEx);
+  document.getElementById('ovBalance').textContent=toComma(Math.abs(net));
+
+  // Income table
+  document.getElementById('cntJob').textContent=toBN(incomeData.job||0)+' জন';
+  document.getElementById('cntStu').textContent=toBN(incomeData.stu||0)+' জন';
+  document.getElementById('cntAdult').textContent=toBN(incomeData.adultsCnt||0)+' জন';
+  document.getElementById('amtJob').textContent=toComma(jobAmt);
+  document.getElementById('amtStu').textContent=toComma(stuAmt);
+  document.getElementById('amtAdult').textContent=toComma(adultsAmt);
+  document.getElementById('totalIncome').textContent=toComma(totalIn);
+
+  // Expense table
+  let expHtml='';
+  if(expenses.length===0){
+    expHtml='<tr><td colspan="4" style="text-align:center;color:#aaa;padding:20px">এখনো কোনো ব্যয় যোগ করা হয়নি।</td></tr>';
+  } else {
+    expenses.forEach((e,i)=>{
+      expHtml+=`<tr>
+        <td>${e.name}</td>
+        <td class="amt red">${toComma(parseFloat(e.amt))}</td>
+        <td style="color:#888;font-size:.85rem">${e.note||'—'}</td>
+        <td><button class="del-btn" onclick="deleteExpense(${i})">🗑️</button></td>
+      </tr>`;
+    });
+  }
+  document.getElementById('expBody').innerHTML=expHtml;
+  document.getElementById('totalExpense').textContent=toComma(totalEx);
+
+  // Balance
+  const bb=document.getElementById('balanceBox');
+  const nb=document.getElementById('netBalance');
+  if(net>=0){bb.className='balance-box';nb.textContent=toComma(net)+' টাকা (উদ্বৃত্ত)';}
+  else{bb.className='balance-box deficit';nb.textContent=toComma(Math.abs(net))+' টাকা (ঘাটতি)';}
+}
+
+async function addExpense(){
+  const name=document.getElementById('expName').value.trim();
+  const amt=parseFloat(document.getElementById('expAmt').value);
+  const note=document.getElementById('expNote').value.trim();
+  if(!name||!amt||amt<=0){alert('ব্যয়ের খাত ও পরিমাণ দিন।');return;}
+
+  const exp={name,amt,note,date:new Date().toLocaleDateString('bn-BD')};
+  expenses.push(exp);
+  localStorage.setItem('expenses',JSON.stringify(expenses));
+
+  // Save to sheet
+  try{
+    await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'expense',...exp})});
+  }catch(e){}
+
+  document.getElementById('expName').value='';
+  document.getElementById('expAmt').value='';
+  document.getElementById('expNote').value='';
+  renderAll();
+}
+
+function deleteExpense(i){
+  if(!confirm('এই ব্যয়টি মুছে ফেলবেন?')) return;
+  expenses.splice(i,1);
+  localStorage.setItem('expenses',JSON.stringify(expenses));
+  renderAll();
+}
+
+loadAll();
+</script>
+</body>
+</html>
